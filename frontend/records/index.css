@@ -1,0 +1,9 @@
+.day-layer {
+    height: 40%;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 2px;
+}

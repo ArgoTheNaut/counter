@@ -1,0 +1,63 @@
+<!-- No Banner -->
+<html>
+    <head>
+        <title>Counter records</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <script src='/plotly-3.0.1.min.js'></script>
+        <script src="/records/index.js"></script>
+        <link rel="stylesheet" href="/records/index.css" />
+    </head>
+
+    <body>
+        <div>
+            <p>Clicks Per Day Dashboard</p>
+        </div>
+
+        <div>
+            <label for="start-time">Data start time:</label>
+            <input
+                type="datetime-local"
+                id="start-time"
+                name="start-time"
+                value="2024-08-14T00:00"
+                min="2024-08-14T00:00" />
+
+            <label for="end-time">Data end time:</label>
+            <input
+                type="datetime-local"
+                id="end-time"
+                name="end-time"
+                value="2040-12-31T00:00"
+                min="2024-08-14T00:00" />
+
+            <label for="interval">Interval:</label>
+            <select name="interval" id="interval" onchange="drawGraphs()">
+                <option value="1-min">1 minute</option>
+                <option value="5-min">5 minutes</option>
+                <option value="10-min">10 minutes</option>
+                <option selected value="15-min">15 minutes</option>
+                <option value="30-min">30 minutes</option>
+                <option value="1-hour">1 hour</option>
+                <option value="2-hour">2 hours</option>
+                <option value="5-hour">5 hours</option>
+                <option value="12-hour">12 hours</option>
+                <option value="24-hour">24 hours</option>
+                <option value="7-day">1 week</option>
+            </select>
+
+            <div>
+                <table id="timeTable">
+                    <!-- dynamically filled by js -->
+                </table>
+            </div>
+
+            <div class="constrained" id="plotRoot">
+            </div>
+        </div>
+
+        <script>
+            startupReset();
+            loadGraph();
+        </script>
+    </body>
+</html>

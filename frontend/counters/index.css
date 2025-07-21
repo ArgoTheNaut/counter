@@ -1,0 +1,75 @@
+.main-container {
+    align-content: center;
+    align-items: center;
+}
+
+.bottom-container {
+    width: 80vw;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.plot-button {
+    align-items: center;
+    width: 100%;
+    min-width: 120px;
+    height: 5vh;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.plot-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+}
+
+.plot-button:active {
+    background-color: #004085;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.increment-switch {
+    border-collapse: collapse;
+    min-width: 280px;
+    max-width: 800px;
+    width: 44vw;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-bottom: 4vh;
+}
+
+.switch-contents {
+    font-size: 5rem;
+    text-align: center;
+}
+
+.same-width-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.same-width-td {
+    width: 50%;
+}
+
+.tile {
+    display: inline-block;
+}
+
+.delta-button {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10rem;
+    min-width: 280px;
+    max-width: 800px;
+    width: 44vw;
+    color: black;
+    display: block;
+}
