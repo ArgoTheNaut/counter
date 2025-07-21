@@ -109,7 +109,7 @@ function prepareTable() {
     let timestamps = data.map(d => dateModDay(d, 1 * HOURS) * HOURS);
     let maxTs = timestamps.sort()[timestamps.length - 1];
     for (let block = tableConfig.startTime; block <= maxTs; block += tableConfig.interval) {
-        let timeStr = dateInEst(new Date(block)).toLocaleTimeString('sv').split(":").slice(0, 2).join(":");
+        let timeStr = (new Date(block)).toISOString().split("T")[1].split(":").slice(0, 2).join(":");
         let tdt = addChildOn(trTimes, "td");
         tdt.innerHTML = timeStr;
     }
